@@ -1,4 +1,4 @@
-package com.arcanium.walletwatch.core.presentation
+package com.arcanium.walletwatch
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -15,6 +15,7 @@ class MainViewModel : ViewModel() {
     fun setUp() = viewModelScope.launch {
         // TODO - setup any business logic
         delay(2000L)
+
         _uiState.update { it.copy(showSplashScreen = false) } // To be removed, temporarily simulates any business logic being done
     }
 }

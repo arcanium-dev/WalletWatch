@@ -1,6 +1,7 @@
 package com.arcanium.walletwatch
 
 import android.animation.ObjectAnimator
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import android.view.animation.AnticipateInterpolator
@@ -13,11 +14,13 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.arcanium.walletwatch.core.presentation.MainViewModel
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.preferencesDataStore
 import com.arcanium.walletwatch.ui.theme.WalletWatchTheme
 
 class MainActivity : ComponentActivity() {
-
+    val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
     private val viewModel: MainViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {

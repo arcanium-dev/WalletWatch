@@ -1,4 +1,4 @@
-package com.arcanium.walletwatch.core.presentation
+package com.arcanium.walletwatch
 
 data class MainActivityUiState(
     val showSplashScreen: Boolean = true
