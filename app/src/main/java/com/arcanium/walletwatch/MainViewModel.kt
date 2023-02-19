@@ -21,8 +21,8 @@ class MainViewModel @Inject constructor(
     fun setUp() = viewModelScope.launch {
         // TODO - setup any business logic
         checkIfUserIsNew.invoke()
+        // To be removed, temporarily simulates any business logic being done
         delay(2000L)
-
-        _uiState.update { it.copy(showSplashScreen = false) } // To be removed, temporarily simulates any business logic being done
+        _uiState.update { it.copy(showSplashScreen = false) }
     }
 }
