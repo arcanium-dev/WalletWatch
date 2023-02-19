@@ -13,14 +13,14 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
-    private val checkIfUserIsNewUseCase: CheckIfUserIsNewUseCase
+    private val checkIfUserIsNew: CheckIfUserIsNewUseCase
 ) : ViewModel() {
     private val _uiState = MutableStateFlow(MainActivityUiState())
     val uiState = _uiState.asStateFlow()
 
     fun setUp() = viewModelScope.launch {
         // TODO - setup any business logic
-        checkIfUserIsNewUseCase.invoke()
+        checkIfUserIsNew.invoke()
         delay(2000L)
 
         _uiState.update { it.copy(showSplashScreen = false) } // To be removed, temporarily simulates any business logic being done
