@@ -84,6 +84,12 @@ dependencies {
 
     // Navigation with Hilt
     implementation "androidx.hilt:hilt-navigation-compose:$navigation_hilt_version"
+
+    // RoomDb
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    testImplementation "androidx.room:room-testing:$room_version"
 }
 
 // Allow references to generated code

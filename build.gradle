@@ -5,6 +5,7 @@ buildscript {
         splash_screen_version = '1.0.0'
         navigation_compose_version = '2.5.3'
         navigation_hilt_version = '1.0.0'
+        room_version = '2.5.0'
     }
 }// Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
