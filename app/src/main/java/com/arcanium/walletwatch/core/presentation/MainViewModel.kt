@@ -1,4 +1,4 @@
-package com.arcanium.walletwatch
+package com.arcanium.walletwatch.core.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
